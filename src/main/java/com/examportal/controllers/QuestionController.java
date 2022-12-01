@@ -60,14 +60,7 @@ public class QuestionController {
     public ResponseEntity<?> getQuestionOfQuizAdmin(@PathVariable("qid")Long qid){
 
 
-       /* Quiz quiz=this.quizService.getQuizById(qid);
-        Set<Question> questions=quiz.getQuestions();
-        List list=new ArrayList(questions);
-        if (list.size()>Integer.parseInt(quiz.getNumberOfQuestion())){
-            list=list.subList(0,Integer.parseInt(quiz.getNumberOfQuestion()+1));
-        }
-        Collections.shuffle(list);
-        return ResponseEntity.ok(list);*/
+
 
         Quiz quiz = new Quiz();
         quiz.setId(qid);
