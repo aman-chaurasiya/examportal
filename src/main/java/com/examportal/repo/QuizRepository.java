@@ -1,12 +1,18 @@
 package com.examportal.repo;
 
+import com.examportal.model.exam.Category;
 import com.examportal.model.exam.Quiz;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface QuizRepository extends JpaRepository<Quiz,Long> {
+import java.util.List;
 
+@Repository
+public interface QuizRepository extends JpaRepository<Quiz, Long> {
+    public List<Quiz> findBycategory(Category category);
+
+    public List<Quiz> findByActive(Boolean b);
+    public List<Quiz> findByCategoryAndActive(Category category,Boolean b);
 
 
 }

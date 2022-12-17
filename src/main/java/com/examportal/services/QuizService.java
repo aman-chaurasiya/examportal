@@ -1,8 +1,11 @@
 package com.examportal.services;
 
+import com.examportal.model.exam.Category;
 import com.examportal.model.exam.Question;
 import com.examportal.model.exam.Quiz;
+import org.springframework.http.ResponseEntity;
 
+import java.util.List;
 import java.util.Set;
 
 public interface QuizService {
@@ -17,5 +20,8 @@ public interface QuizService {
 
     public void deleteQuiz(Long qid);
 
+    List<Quiz> getQuizzesOfCategory(Category category);
+    List<Quiz> getActiveQuizzes();
+    public List<Quiz> getActiveQuizzesOfCategory(Category c);
 
 }
